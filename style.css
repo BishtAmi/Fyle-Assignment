@@ -1,0 +1,138 @@
+.box {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  width: 32rem;
+  /* background-color: wheat; */
+  height: 32rem;
+  border: 1px solid black;
+  display: block;
+  padding: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+form {
+  font-weight: 750;
+}
+
+.icons {
+  margin-left: 3px;
+  border-radius: 10px;
+  width: 1rem;
+  height: 1rem;
+  padding: 4px;
+  border: 1px solid black;
+  font-size: 10px;
+  text-align: center;
+  opacity: 50%;
+  position: relative;
+}
+
+.icons:hover .infotip {
+  display: block;
+}
+
+.icons:hover {
+  opacity: 100%;
+}
+
+.infotip {
+  position: absolute;
+  background-color: #4d5d6a;
+  padding: 0.5rem;
+  font-size: 14px;
+  color: white;
+  bottom: 165%;
+  left: -13px;
+  width: 128px;
+  text-align: left;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 5px;
+  z-index: 10;
+  display: none;
+}
+
+.infotip::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 15%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+
+  color: white;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #4d5d6a;
+  background-color: transparent;
+  z-index: 2;
+  display: block;
+}
+
+.error-class {
+  position: relative;
+  display: none;
+}
+
+.error-class:hover .infotip {
+  display: block;
+  width: max-content;
+  left: -15px;
+}
+
+.selectbar .error {
+  right: 28px;
+}
+
+.error {
+  position: absolute;
+  right: 14px;
+  top: -25px;
+  z-index: 5;
+  color: #4d5d6a;
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 30px;
+  left: -32px;
+  width: 36rem;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 26rem;
+  border: 1px solid black;
+
+  padding: 2rem;
+  z-index: 10;
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.button {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#error-message {
+  text-align: center;
+  display: none;
+}
+
+.show {
+  display: block;
+}
